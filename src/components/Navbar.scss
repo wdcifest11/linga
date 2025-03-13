@@ -1,0 +1,165 @@
+.navbar {
+  font-family: "Plus Jakarta Sans", serif;
+  background-color: black;
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+
+  .topNavbar {
+    margin-top: 70px;
+  }
+
+  .navButton {
+    padding: 8px 30px 8px 40px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: inline-block;
+  }
+
+  .navButton::after {
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    content: "";
+    display: block;
+    transition: width 0.3s;
+  }
+
+  .navButton:hover::after {
+    width: 100%;
+  }
+}
+
+.miniNavLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  
+  P {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+
+.openButton {
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 9px 0;
+}
+
+.miniNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 80px;
+  height: calc(100vh - 60px);
+  align-items: center;
+  justify-content: start;
+  z-index: 2;
+  margin-top: 60px;
+  text-align: center;
+  
+
+  img {
+    display: block;
+    width: 40px;
+    margin-top: 20px;
+  }
+}
+
+.closeButton:hover {
+  cursor: pointer;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  height: 6vh;
+  background-color: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 100vw;
+}
+
+.closeButton {
+  z-index: 300;
+  position: fixed;
+  top: 10px; 
+  left: 20px;
+}
+
+
+.websiteName {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 700;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+  z-index: 99;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+
+  img {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .topBar {
+    background-color: white;
+    z-index: 99;
+    position: fixed;
+  }
+
+  .websiteName {
+    font-size: 35px;
+  }
+
+  .navbar {
+    height: 120vh;
+    position: fixed;
+  }
+}
+
+
+@media only screen and (max-height: 540px) {
+  .miniNav {
+    img {
+      margin-top: 10px;
+    }
+  }
+
+  .miniNav {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .closeButton {
+    top: 4px;
+  }
+}

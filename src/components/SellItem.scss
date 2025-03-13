@@ -1,0 +1,172 @@
+.sellItemContainer {
+  padding-top: 78px;
+  margin-left: 80px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.uploadedImage {
+  width: 20vh;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.uploadedImagePrev {
+  height: 50px;
+  width: 50px;
+}
+
+.imageContainer {
+  margin-right: 50px;
+  width: 40vh;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sellItemForm {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 50vw;
+
+  input[type="file"],
+  input[type="submit"] {
+    margin-left: 0;
+    cursor: pointer;
+  }
+
+  input,
+  textarea,
+  option,
+  select,
+  .switch {
+    font-size: 20px;
+  }
+
+  textarea,
+  option,
+  select,
+  input[type="text"],
+  input[type="submit"] {
+    padding: -5px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: none;
+    background-color: rgb(243, 243, 243);
+  }
+
+  button {
+    font-size: 25px;
+  }
+
+  label {
+    p {
+      margin: 0 10px 0 0;
+      padding: 0;
+      display: inline-block;
+    }
+  }
+}
+
+.descLabel {
+  display: block;
+  width: 80vw;
+}
+
+.sellButton {
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: black;
+  width: 13vw;
+  height: 5vh;
+  cursor: pointer;
+}
+
+.sellButton:hover {
+  filter: invert(0.15);
+}
+
+.sellableButton {
+  background-color: white;
+}
+
+.tradeableButton {
+  background-color: black;
+  color: white;
+}
+
+.submit {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 820px) {
+  .sellItemContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .descriptionSubmission {
+    textarea {
+      width: 50vw;
+    }
+  }
+
+  .sellItemForm {
+    font-size: 20px;
+
+    input,
+    textarea,
+    option,
+    select,
+    .switch {
+      font-size: 15px;
+    }
+  }
+
+  .imageContainer, .uploadedImage {
+    height: 30vh;
+    width: 30vh;
+    margin-right: 0;
+  }
+
+  .submit {
+    
+    input {
+      width: 70vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .sellItemContainer {
+    margin-left: 0;
+  }
+
+  .sellItemForm {
+    align-items:flex-start;
+  }
+
+  .submit {
+    input {
+      width: 50vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .switch {
+    display: block !important;
+  }
+}

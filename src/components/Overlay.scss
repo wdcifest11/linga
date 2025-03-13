@@ -1,0 +1,217 @@
+.overlayContainer {
+  position: absolute;
+  pointer-events: none;
+
+  .clickBlocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 10;
+    display: none;
+    pointer-events: auto;
+  }
+
+  .title,
+  .stateOne,
+  .stateTwo,
+  .stateThree {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .title {
+    padding-top: 5vh;
+    display: flex;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    text-wrap: nowrap;
+    .titleText {
+      font-size: 140px;
+      .titleTextp {
+        margin: 0px;
+      }
+    }
+    .hashtagImage {
+      width: 360px;
+    }
+  }
+
+  .stateTextContainer {
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    top: 50vh;
+    left: 1vw;
+    text-align: center;
+
+    .stateTextTitle {
+      font-weight: 700;
+      font-size: 70px;
+      margin: 3px;
+    }
+
+    .stateText {
+      font-size: 50px;
+      margin: 3px;
+    }
+  }
+
+  .stateOne {
+    width: 1000px;
+    left: 8vw;
+  }
+
+  .stateTwo {
+    width: 1150px;
+    top: 65vh;
+  }
+
+  .stateThree {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 40vh;
+    overflow: visible;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+
+    .getStartedText {
+      font-size: 18px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .getStarted {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #000000;
+      border-radius: 8px;
+      pointer-events: auto;
+    }
+
+    .getStarted:hover {
+      box-shadow: 0 0 12px rgba(148, 148, 148, 0.9);
+      overflow: visible;
+    }
+    
+  }
+}
+
+.clickContinue {
+  position: absolute;
+  left: 4vw;
+  top: 85vh;
+  font-size: 50px;
+  width: 700px;
+  font-weight: 400 !important;
+}
+
+@media only screen and (max-width: 1100px) {
+
+  .clickContinue {
+    top: 70vh;
+    margin-left: 40px;
+  }
+
+  .stateText {
+    font-size: 40px !important;
+  }
+
+  .stateOne {
+    padding-left: 40px;
+    width: 80vw !important; 
+  }
+
+  .stateTwo {
+    top: 50vh !important;
+    left: 20vw !important;
+    width: 75vw !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .titleText {
+    font-size: 14vw !important;
+  }
+
+  .hashtagImage {
+    width: 38vw !important;
+  }
+
+  .title {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
+  .stateText {
+    font-size: 25px !important;
+  }
+
+  .stateTextTitle {
+    font-size: 35px !important;
+  }
+
+  .stateOne {
+    width: 70vw !important;
+    height: 40vh;
+    left: 40px !important;
+  }
+
+  .stateTwo {
+    top: 65vh !important;
+    width: 80vw !important;
+    height: 40vh;
+  }
+
+  .stateTwo {
+    transform: translate(0, -70px);
+  }
+
+  .stateThree {
+    padding-left: 80px;
+    width: 70vw !important;
+  }
+
+  .clickContinue {
+    width: 90vw;
+    top: 80vh;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .clickContinue {
+    left: 30px;
+    top: 70vh;
+    font-size: 20px;
+  }
+
+  .titleTextp {
+    font-size: 35px;
+  }
+
+  .hashtagImage {
+    width: 95px !important;
+  }
+
+  .title {
+    padding-left: 10px;
+  }
+
+  .stateText, .getStartedText {
+    font-size: 15px !important;
+  }
+
+  .stateTextTitle {
+    font-size: 20px !important;
+  }
+
+  .stateOne {
+    top: 60vh !important;
+  }
+}

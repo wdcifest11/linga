@@ -1,0 +1,95 @@
+.verticalCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(243, 243, 243);
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+.verticalCard:hover {
+  translate: 0 -5px;
+  box-shadow: 0 4px 12px grey;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageVertical {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.nameContainer {
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.sizeContainer,
+.priceContainer {
+  margin: 0;
+  color: grey;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.deleteButton:active {
+  transform: scale(0.85);
+}
+
+@media only screen and (max-width: 768px) {
+  .verticalCard {
+    width: 65vw;
+    height: 15vh;
+  }
+
+  .imageVertical {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .deleteButton {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .verticalCard {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .verticalCard {
+    width: 50vw;
+  }
+
+  .nameContainer {
+    font-size: 20px;
+  }
+
+  .sizeContainer, .priceContainer {
+    font-size: 11px;
+  }
+}
+

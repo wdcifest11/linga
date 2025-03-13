@@ -1,0 +1,249 @@
+.cfmContainer {
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+.cfmrn {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.4;
+}
+
+.cfmrnSmall {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  p {
+    color: white;
+  }
+}
+
+.cfmTitle {
+  font-size: 40px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.cfmItem {
+  font-size: 25px;
+}
+
+.cfmButton {
+  border-radius: 10px;
+  border-width: 2px;
+  width: calc(30vw / 2);
+  height: 5vh;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.cfmBtnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cfmButton:hover {
+  filter: invert(0.15);
+}
+
+.confirmButton {
+  background-color: white;
+}
+
+.cancelButton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: black;
+}
+
+.cartContainer {
+  padding-top: 90px;
+  margin-left: 90px;
+  margin-right: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+}
+
+.toBuyContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 80vh;
+  flex-direction: column;
+  overflow: auto;
+  width: 600px;
+  align-items: center;
+  scrollbar-width: thin;
+  padding: 10px;
+}
+
+.toBuyContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.toBuyContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.eduContainer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  width: 40vw;
+  border-radius: 10px;
+  margin-top: 30px;
+
+  p {
+    color: white;
+    font-size: 20px;
+  }
+
+  img {
+    padding: 0 10px 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.otherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.totalPrice {
+  font-size: 23px;
+}
+
+.cartButton {
+  font-size: 18px;
+  width: 250px;
+  height: 5vh;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  cursor: pointer;
+}
+
+.cartButton:hover {
+  filter: invert(0.15);
+  box-shadow: 0 4px 8px grey;
+}
+
+.cartButton:active {
+  scale: 97%;
+}
+
+.clearCartButton {
+  background-color: black;
+  color: white;
+}
+
+.checkOutButton {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 1380px) {
+  .cartContainer {
+    flex-direction: column;
+    margin-left: 80px;
+  }
+
+  .toBuyContainer {
+    width: 100vw;
+    padding-right: 0;
+    margin-top: 70px;
+    height: 50vh;
+  }
+
+  .otherContainer {
+    padding-bottom: 50px;
+    font-size: 30px !important;
+  }
+
+  .cartButton {
+    width: 60vw;
+    height: 7vh;
+    max-height: 60px;
+  }
+
+  .cfmButton {
+    height: 8vh;
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .cartContainer {
+    margin-left: 0px;
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  .toBuyContainer {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cfmTitle {
+    font-size: 25px;
+  }
+
+  .cfmItem {
+    font-size: 20px;
+  }
+
+  .cfmButton {
+    font-size: 20px;
+  }
+
+  .eduContainer {
+    p {
+      font-size: 16px;
+    }
+
+    img {
+      height: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .toBuyContainer {
+    width: 95vw;
+    padding-right: 0;
+    margin-top: 0px;
+    height: 50vh;
+  }
+}

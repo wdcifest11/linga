@@ -1,0 +1,136 @@
+.itemDetailsContainer {
+  margin-left: 90px;
+  margin-right: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: calc(100vh - 70px);
+  justify-content: space-around;
+  gap: 60px;
+
+  img {
+    width: 30vw;
+    height: 30vw;
+    padding: 5px;
+    margin: 30px;
+    border-radius: 10px;
+  }
+
+  .detailContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+
+    .inside {
+      margin: 2px;
+      color: grey;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 70px;
+      margin-bottom: 25px;
+    }
+
+    .yearCondition {
+      margin-bottom: 5px;
+    }
+
+    .description {
+      height: 27vh;
+      overflow: auto;
+      margin-top: 25px;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: auto; 
+    margin-top: 20px; 
+
+    button {
+      width: 13vw;
+      border-style: solid;
+      border-color: black;
+      border-width: 2px;
+      border-radius: 8px;
+      height: 5vh;
+      min-height: 30px;
+      cursor: pointer;
+    }
+
+    .buyButton {
+      background-color: white;
+    }
+
+    .tradeButton {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.price {
+  font-size: 25px;
+  margin: 2px;
+}
+
+.userDetailName {
+  font-size: 20px;
+}
+
+.userDetailImage {
+  border-radius: 100px !important;
+  width: 45px !important;
+  height: 45px !important;
+  margin: 0 10px 0 0 !important;
+  padding: 0 !important;
+}
+
+.detailUserContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.buyButton:hover, .tradeButton:hover {
+  transition: 0.3;
+  box-shadow: 0 5px 10px rgb(189, 189, 189);
+  filter: invert(0.1);
+}
+
+.buyButton:active, .tradeButton:active{
+  scale: 95%;
+}
+
+@media only screen and (max-width: 768px) {
+  .itemDetailsContainer {
+    padding-top: 70px;
+    flex-direction: column;
+
+    img {
+      width: 65vw;
+      height: 65vw;
+      object-fit: cover;
+    }
+  }
+
+  .detailContainer {
+    width: 70vw !important;
+  }
+
+  .buttonContainer {
+    padding-bottom: 100px;
+    justify-content: center;
+    width: calc(100vw - 180px) !important;
+
+    button {
+      width: 50vw !important;
+    }
+  }
+}

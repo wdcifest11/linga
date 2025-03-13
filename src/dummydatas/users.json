@@ -1,0 +1,23 @@
+[
+  {
+    "userid": "89347",
+    "username": "Bob",
+    "profilepic": "/Bob.jpg"
+  },
+  {
+    "userid": "14624",
+    "username": "Mary",
+    "profilepic": "/Mary.jpg"
+  },
+  {
+    "userid": "98731",
+    "username": "John",
+    "profilepic": "/John.jpg"
+  },
+  {
+    "userid": "11111",
+    "username": "self",
+    "profilepic": "/placeholder.png"
+  }
+  
+]

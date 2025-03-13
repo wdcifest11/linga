@@ -1,0 +1,83 @@
+.itemCardContainer {
+  --button-count: 2;
+
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 2px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  height: 382px;
+  overflow: hidden;
+
+  img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    max-height: 230px;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .textContainer {
+    margin-top: 12px;
+
+    .nameContainer {
+      font-size: 20px;
+    }
+
+    .typesizeContainer {
+      color: rgb(167, 167, 167);
+    }
+  }
+
+  button {
+    font-family: "Plus Jakarta Sans", serif;
+    background-color: transparent;
+    font-size: 15px;
+    border-radius: 8px;
+    height: 40px;
+    width: calc(230px / var(--button-count));
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    filter: invert(30%);
+  }
+
+  .buttonContainerCard {
+    translate: 0px -40px;
+    height: 0;
+    opacity: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 250px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .tradebutton {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .itemCardContainer {
+    width: 60vw;
+
+    button {
+      width: 50vw;
+    }
+  }
+
+  .buttonContainerCard {
+    flex-direction: column !important;
+  }
+}

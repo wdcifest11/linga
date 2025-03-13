@@ -1,0 +1,10 @@
+.splineScene{
+    height: 100vh !important;
+    z-index: -1;
+    pointer-events: auto;
+}
+
+.aboutContainer {
+    overflow-y: hidden;
+    display: block;
+}

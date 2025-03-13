@@ -1,0 +1,223 @@
+.itemsContainer {
+  display: grid;
+  margin-top: 30px;
+  min-height: 100vh;
+
+  p {
+    display: inline;
+  }
+}
+
+.shopContainer {
+  width: calc(100vw - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  margin-left: 70px;
+  opacity: 1;
+  overflow-y: hidden;
+}
+
+.submitButton {
+  border-radius: 20px;
+  border-style: none;
+
+  img {
+    width: 35px;
+  }
+}
+
+.upperBar {
+  height: 8vh;
+  width: calc(100vw - 70px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  label {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+
+    .searchInput {
+      padding: -5px;
+      width: 300px;
+      height: 40px;
+      border-radius: 10px;
+      border-width: 3px;
+      font-size: 25px;
+      border-style: none;
+      background-color: rgb(243, 243, 243);
+    }
+  }
+
+  .searchBar {
+    margin-left: 0;
+  }
+}
+
+.itemCardContainer:hover {
+  translate: 0 -10px !important;
+  transition: 0.3s ease-out;
+  box-shadow: 0 4px 10px grey;
+}
+
+.itemCardWrapper {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.submitButton:hover,
+.searchInput:hover,
+.filterButton:hover {
+  box-shadow: 0 2px 5px grey;
+  transition: 0.3s;
+}
+
+.filterContainer {
+  background-color: rgb(243, 243, 243);
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  z-index: 2;
+  margin: 25px;
+  padding: 10px;
+  top: 32vh;
+  right: 35vw;
+  opacity: 0;
+  pointer-events: none;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    label {
+      margin: 5px 0;
+    }
+  }
+}
+
+.filterContainer.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.filterButton {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filterImage {
+  width: 30px;
+}
+
+@media only screen and (max-width: 360px) {
+  .filterContainer {
+    width: 50vw;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .itemsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .shopContainer {
+    margin-left: 0 !important;
+    width: 100vw;
+  }
+
+  .upperBar {
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .searchBar {
+    margin: 0 !important;
+
+    input {
+      width: 40vw !important;
+      font-size: 20px !important;
+    }
+  }
+
+  .filterButton {
+    margin-left: 5px;
+  }
+
+  .filterContainer {
+    width: 30vw;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .itemsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .shopContainer {
+    margin-left: 45px;
+  }
+
+  .itemsContainer {
+    justify-content: center;
+  }
+
+  .upperBar {
+    justify-content: space-around;
+    height: 100px;
+  }
+
+  .searchBar input {
+    font-size: 20px !important;
+  }
+
+  .filterContainer {
+    top: 38vh;
+    right: 7vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .itemsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shopContainer {
+    margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .itemsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

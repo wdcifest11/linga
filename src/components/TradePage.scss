@@ -1,0 +1,266 @@
+.tradePageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  
+  .clear {
+    position: relative;
+    border-radius: 8px;
+    font-size: 23px;
+    border-style: none;
+    background-color: transparent;
+    margin: 10px;
+  }
+
+  .clear:active {
+    scale: 95%;
+  }
+
+  .clear:hover {
+    cursor: pointer;
+  }
+}
+
+.traderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.tradeLogo {
+  height: 8vw;
+}
+
+.clothesPict {
+  height: 25vw;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 600px;
+  align-items: center;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 80vh;
+  padding: 10px;
+  scrollbar-width: thin;
+
+  .addImage {
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+.itemContainerTitle {
+  text-align: center;
+  font-size: 30px;
+}
+
+.toast {
+  translate: 0 7vh;
+}
+
+.itemTradeContainer {
+  display: inline-block;
+}
+
+.itemContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.itemContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.tradeSubmitButton {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  height: auto;
+  width: 20vw;
+  min-height: 5vh;
+  max-height: 80px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tradeSubmitButton:hover {
+  filter: invert(0.15);
+}
+
+.eduTradeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  max-width: 70vw;
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .itemContainer {
+    background-color: rgb(231, 231, 231);
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1720px) {
+  .tradePageContainer {
+    padding-top: 8vh;
+  }
+
+  .eduTradeContainer {
+    height: 15vh;
+  }
+
+  .traderContainer {
+    width: 100%;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tradeLogo {
+    height: 10vw;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .addImage {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tradeSubmitButton {
+    width: 60vw;
+    height: 6vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tradePageContainer {
+    margin-left: 20px;
+    padding-top: 8vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .traderContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tradeLogo {
+    height: 50vw;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .clothesPict {
+    height: 55vw;
+    width: 80vw;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .itemContainer {
+    width: 90vw;
+    max-height: 50vh;
+    align-items: center;
+
+    .addImage {
+      width: 30vw;
+      height: 30vw !important;
+    }
+  }
+
+  .tradeLogo {
+    height: 10vh !important;
+    width: 10vh !important;
+  }
+
+  .buttonContainer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .clear {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .tradeSubmitButton {
+    width: 60vw;
+    height: 8vh;
+  }
+
+  .eduTradeContainer {
+    height: 12vh;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .tradePageContainer {
+    margin-left: 0;
+  }
+
+  .eduTradeContainer {
+    font-size: 16px;
+    height: 10vh;
+    margin-top: 20px;
+
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .eduTradeContainer {
+    font-size: 12px;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

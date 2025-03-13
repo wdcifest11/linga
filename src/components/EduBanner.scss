@@ -1,0 +1,109 @@
+.eduBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+
+  .eduBannerInner {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 75vw;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+
+    img {
+      width: 40px;
+      height: 40px;
+      padding-left: 20px;
+    }
+
+    .eduText {
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      text-align: center;
+      min-width: fit-content;
+      transition: width 0.3s ease-in-out;
+    }
+
+    p {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transition: clip-path 0.5s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .eduBannerInner {
+    height: 15vh;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .eduBannerInner {
+    width: 70vw;
+    height: 10vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eduBannerInner {
+    width: 85vw;
+    height: auto;
+    flex-direction: column;
+    padding: 15px;
+
+    p {
+      font-size: 18px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .eduBannerInner {
+    width: 90vw;
+    height: 15vh;
+    padding: 10px;
+
+    p {
+      font-size: 16px !important;
+    }
+
+    img {
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .eduBannerInner {
+    width: 95vw;
+    height: 20vh;
+    padding: 8px;
+
+    p {
+      font-size: 12px !important;
+    }
+
+    img {
+      width: 25px !important;
+      height: 25px !important ;
+    }
+  }
+}
